@@ -1,0 +1,7 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build',
+  '--build-arg', 'PROJECT_ID=$PROJECT_ID',
+  '-t', 'northamerica-northeast1-docker.pkg.dev/$PROJECT_ID/chatbot-bagelbot-index/image:latest', '.' ]
+images:
+- 'northamerica-northeast1-docker.pkg.dev/$PROJECT_ID/chatbot-bagelbot-index/image:latest'
